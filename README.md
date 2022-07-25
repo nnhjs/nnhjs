@@ -10,7 +10,7 @@
               ||     ||
 </pre>
 
-I am currently working as a Frontend Engineer for [Bot It AI](https://bot-it.ai/). I usually work with javascript and react. I love my life. I like to contribute to community and sharing my knowleadge. Nice to meet you 👋
+I am currently working as a Frontend Engineer for [Bot It AI](https://bot-it.ai/). I usually work with javascript and react. I love my life. I would like to contribute to community and sharing my knowleadge. Nice to meet you 👋
 
 ### Check out my social medias:
 
