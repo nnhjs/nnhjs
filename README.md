@@ -16,8 +16,3 @@ I am currently working as a Frontend Engineer for [Bot It AI](https://bot-it.ai/
 
 - 🔗 [LinkedIn](https://www.linkedin.com/in/nnhungjs/)
 - 🐦 [Twitter](https://twitter.com/nnhungjs)
-
-![nnhjs's github stats](https://github-readme-stats.vercel.app/api?username=nnhjs&show_icons=true)
-
-### and just a funny gif...😛
-![](https://media.giphy.com/media/13GIgrGdslD9oQ/giphy.gif)
