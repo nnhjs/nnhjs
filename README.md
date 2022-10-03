@@ -3,4 +3,4 @@ I am currently working as a Frontend Engineer for [Bot It AI](https://bot-it.ai/
 ### Check out my social medias:
 
 - 🔗 [LinkedIn](https://www.linkedin.com/in/nnhungjs/)
-- 🐦 [Twitter](https://twitter.com/sofmarkk)
+- 🐦 [Twitter](https://twitter.com/nnhungjs)
