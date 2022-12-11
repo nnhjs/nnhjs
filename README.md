@@ -1,6 +1,6 @@
-I am currently working as a Frontend Engineer for [Bot It AI](https://bot-it.ai/). I usually work with javascript and react. I like to do everything. Nice to meet you 👋
+I am currently working as a Frontend Engineer for [Bot It AI](https://bot-it.ai/). I usually work with javascript and react. I like do everything. Nice to meet you 👋
 
-"Stay hungry, stay foolish" -- Steve Jobs
+"Stay hungry, stay foolish" - Steve Jobs
 
 ### Check out my social medias:
 
