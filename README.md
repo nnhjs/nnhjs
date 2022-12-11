@@ -1,4 +1,4 @@
-I am currently working as a Frontend Engineer for [Bot It AI](https://bot-it.ai/). I usually work with javascript and react. I like do everything. Nice to meet you 👋
+I am currently working as a Frontend Engineer for [Bot It AI](https://bot-it.ai/). I usually work with javascript and react. I hope I can be better than yesterday's me.
 
 "Stay hungry, stay foolish" - Steve Jobs
 
