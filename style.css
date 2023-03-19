@@ -70,14 +70,17 @@ h6 {
 
 body {
   display: flex;
+  margin: auto;
+  max-width: 56rem;
+  margin-top: 8rem;
 }
 
-nav {
+aside {
   flex-basis: 150px;
   margin-right: 48px;
 }
 
-nav img {
+aside img {
   max-width: 100%;
 }
 
