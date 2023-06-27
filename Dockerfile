@@ -6,4 +6,3 @@ COPY package.json pnpm-lock* ./
 RUN pnpm install --prod
 COPY . .
 RUN pnpm run build
-CMD pnpm run start
