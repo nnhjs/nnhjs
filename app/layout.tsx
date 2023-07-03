@@ -1,7 +1,10 @@
 import './globals.css'
-import { Roboto_Flex } from 'next/font/google'
+import { Be_Vietnam_Pro } from 'next/font/google'
 
-const inter = Roboto_Flex({ subsets: ['latin'] })
+const inter = Be_Vietnam_Pro({
+  subsets: ['vietnamese'],
+  weight: ['300', '400'],
+})
 
 export const metadata = {
   title: 'Hung Nguyen',
