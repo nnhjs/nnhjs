@@ -1,41 +1,48 @@
 import Image from 'next/image'
 import mark from '@/app/favicon.ico'
+import {
+  GitHubLogoIcon,
+  LinkedInLogoIcon,
+  TwitterLogoIcon,
+} from '@radix-ui/react-icons'
 
 export default function Sidebar() {
   return (
-    <aside
-      style={{
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        textAlign: 'center',
-      }}>
-      <h1>Hung Nguyen</h1>
+    <aside className='flex flex-col items-center text-center'>
+      <h1 className='text-3xl'>Hung Nguyen</h1>
       <Image
-        style={{
-          borderRadius: '50%',
-          marginBlock: '0.5rem',
-        }}
+        className='my-8 rounded-full'
         src={mark}
         alt='Hung Nguyen'
         unoptimized
         height={200}
         width={200}
       />
-      <p
-        style={{
-          paddingBlock: '0.5rem',
-        }}>
+      <p className='py-4'>
         {`I'm Mark, a frontend engineer.`}
-        <br /> I am try to better than myself yesterday.
+        <br /> Currently, I work on some side projects.
       </p>
-      <p
-        style={{
-          paddingBlock: '0.5rem',
-        }}>
-        Currently, I work on some side projects.
-      </p>
-      <div className='social'></div>
+      <i className='py-4'>Stay hungry, stay foolish.</i>
+      <div className='grid grid-cols-3 gap-3'>
+        <a
+          href='https://github.com/nnhjs'
+          target='reg'
+          className='scale-125 rounded-lg p-1 transition-colors hover:bg-slate-200	'>
+          <GitHubLogoIcon />
+        </a>
+        <a
+          href='https://twitter.com/nnhungjs'
+          target='reg'
+          className='scale-125 rounded-lg p-1 transition-colors hover:bg-slate-200'>
+          <TwitterLogoIcon />
+        </a>
+        <a
+          href='https://www.linkedin.com/in/nnhungjs/'
+          target='reg'
+          className='scale-125 rounded-lg p-1 transition-colors hover:bg-slate-200'>
+          <LinkedInLogoIcon />
+        </a>
+      </div>
     </aside>
   )
 }

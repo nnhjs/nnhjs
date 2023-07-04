@@ -3,7 +3,7 @@ import { Be_Vietnam_Pro } from 'next/font/google'
 
 const inter = Be_Vietnam_Pro({
   subsets: ['vietnamese'],
-  weight: ['300', '400'],
+  weight: ['100', '200', '300', '400', '500'],
 })
 
 export const metadata = {
