@@ -1,7 +1,10 @@
 import './globals.css'
-import { Inter } from 'next/font/google'
+import { Be_Vietnam_Pro } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Be_Vietnam_Pro({
+  subsets: ['vietnamese'],
+  weight: ['100', '200', '300', '400', '500'],
+})
 
 export const metadata = {
   title: 'Hung Nguyen',
