@@ -1,3 +1,3 @@
 export default function Article() {
-  return <div className='w-64 rounded border'>Article</div>
+  return <div className='rounded border'>Article</div>
 }
