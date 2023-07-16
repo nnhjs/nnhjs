@@ -15,8 +15,8 @@ export default function Sidebar() {
         src={mark}
         alt='Hung Nguyen'
         unoptimized
-        height={100}
-        width={100}
+        height={200}
+        width={200}
       />
       <p className='py-4'>
         {`I'm Mark, a frontend engineer.`}
