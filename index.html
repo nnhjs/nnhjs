@@ -1,11 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hung Nguyen</title>
-</head>
-<body>
-  <h1>Hung Nguyen</h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hung Nguyen</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="icon" type="image/png" href="/images/favicon.png" />
+    <link rel="alternate" href="https://nnhjs.me/vi/" hreflang="vi-VI" />
+    <link rel="canonical" href="https://nnhjs.me" />
+
+    <!-- Pragma directives -->
+    <meta http-equiv="refresh" content="60;" />
+    <!-- <meta http-equiv="content-security-policy" content="default-src https:" /> -->
+
+    <!-- Named meta tags -->
+    <meta
+      name="description"
+      content="My name is Hung Nguyen, this is my blog that I sharing my skill in coding and my life. Stay hungry, stay foolish!"
+    />
+
+    <!-- Open Graph -->
+    <!-- Facebook -->
+    <meta property="og:title" content="[FB] Hung Nguyen Blog" />
+    <meta
+      property="og:description"
+      content="[FB] My name is Hung Nguyen, this is my blog that I sharing my skill in coding and my life. Stay hungry, stay foolish!"
+    />
+    <meta property="og:image" content="images/favicon.png" />
+    <meta
+      property="og:image:alt"
+      content="[FB] This is a image cover of my blog"
+    />
+
+    <!-- Twitter -->
+    <meta name="twitter:title" content="[TW] Hung Nguyen Blog" />
+    <meta
+      name="twitter:description"
+      content="[TW] School for machines who can't learn good and want to do other stuff good too"
+    />
+    <meta name="twitter:url" content="images/favicon.png" />
+    <meta
+      name="twitter:image:src"
+      content="http://www.machinelearningworkshop.com/image/all.png"
+    />
+    <meta name="twitter:image:alt" content="[TW] This is my block" />
+    <meta name="twitter:creator" content="@nnhjs" />
+    <meta name="twitter:site" content="@nnhjs" />
+
+    <!-- PWA -->
+    <link
+      rel="apple-touch-startup-image"
+      href="icons/ios-portrait.png"
+      media="orientation: portrait"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      href="icons/ios-landscape.png"
+      media="orientation: landscape"
+    />
+
+    <meta name="apple-mobile-web-app-title" content="Mark" />
+    <meta name="application-name" content="Mark" />
+
+    <!-- Tailwindcss -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="flex flex-col h-screen" >
+    <header class="bg-red-200" >
+      <h1 class="text-3xl font-bold text-center">Hung Nguyen</h1>
+      <nav class="text-center pt-4" >
+        <a href="#home" class="px-2" >Home</a>
+        <a href="#about" class="px-2" >About</a>
+        <a href="#projects" class="px-2" >Projects</a>
+        <a href="#contact" class="px-2" >Contact</a>
+      </nav>
+    </header>
+
+    <main class="flex justify-center items-center grow bg-sky-200	" >
+      <div class="flex items-center justify-center">
+        <button id="add" class="border-2 border-indigo-600 px-2 py-1 rounded-lg hover:bg-sky-700 hover:text-white focus:outline-none focus:ring focus:ring-violet-300" >+</button>
+        <div id="count" class="px-4"></div>
+        <button id="sub" class="border-2 border-indigo-600 px-2 py-1 rounded-lg hover:bg-sky-700 hover:text-white focus:outline-none focus:ring focus:ring-violet-300">-</button>
+      </div>
+    </main>
+
+    <footer class="text-center bg-emerald-200 py-3" >
+      <span class="emoji text-3xl" >🥳</span> Stay hungry, stay foolish!
+    </footer>
+  </body>
+
+  <script>
+    if (HTMLScriptElement.supports?.("importmap")) {
+      console.log("Browser supports import maps.");
+    }
+  </script>
+  <script type="importmap">
+    {
+      "imports": {
+        "adding": "./scripts/add.js",
+        "substracting": "./scripts/substract.js"
+      }
+    }
+  </script>
+  <script type="module" >
+    import adding from 'adding'
+    import substracting from 'substracting'
+
+    let count = 0;
+    function render() {
+      countEle.textContent = count;
+    }
+    const btnAdd = document.getElementById("add");
+    const btnSub = document.getElementById("sub");
+    const countEle = document.getElementById("count");
+    btnAdd.addEventListener("click", () => {
+      count = adding(count)
+      render();
+    });
+    btnSub.addEventListener("click", () => {
+      count = substracting(count)
+      render()
+    });
+    render();
+  </script>
 </html>
