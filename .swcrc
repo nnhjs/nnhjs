@@ -1,0 +1,7 @@
+{
+  "$schema": "https://json.schemastore.org/swcrc",
+  "jsc": {
+    "target": "es5"
+  },
+  "minify": false
+}
