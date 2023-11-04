@@ -1,4 +1,21 @@
 {
   "projectName": "nnhjs",
-  "projectOwner": "nnhjs"
+  "projectOwner": "nnhjs",
+  "files": [
+    "README.md"
+  ],
+  "commitType": "docs",
+  "commitConvention": "angular",
+  "contributorsPerLine": 7,
+  "contributors": [
+    {
+      "login": "nnhjs",
+      "name": "Hung Nghia Nguyen",
+      "avatar_url": "https://avatars.githubusercontent.com/u/52577080?v=4",
+      "profile": "http://nnhjs.me",
+      "contributions": [
+        "code"
+      ]
+    }
+  ]
 }
