@@ -32,7 +32,7 @@ function Game() {
       description = 'Go to game start';
     }
     return (
-      <li key={move} className={clsx('my-2 rounded-md bg-gray-100 px-2', move === currentMove && 'bg-red-200')}>
+      <li key={move} className={clsx('my-2 rounded-md bg-gray-100 px-2', move === currentMove && 'bg-blue-200')}>
         <button onClick={() => jumpTo(move)}>{description}</button>
       </li>
     );

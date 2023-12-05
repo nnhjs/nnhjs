@@ -42,8 +42,8 @@ function Board({
     }
     onPlay(nextSquares);
   }
-  let status;
-  let line;
+  let status: string;
+  let line: number[] = [];
   if (winner) {
     status = 'Winner: ' + winner.name + ' 🎉';
     line = winner.line;
@@ -58,17 +58,32 @@ function Board({
       <div className="status">{status}</div>
       <Flex gap="4">
         {[0, 1, 2].map((item) => (
-          <Square value={squares[item]} onSquareClick={() => handleClick(item)} winnerItem={!!line?.includes(item)} />
+          <Square
+            key={item}
+            value={squares[item]}
+            onSquareClick={() => handleClick(item)}
+            winnerItem={line.includes(item)}
+          />
         ))}
       </Flex>
       <Flex gap="4">
         {[3, 4, 5].map((item) => (
-          <Square value={squares[item]} onSquareClick={() => handleClick(item)} winnerItem={!!line?.includes(item)} />
+          <Square
+            key={item}
+            value={squares[item]}
+            onSquareClick={() => handleClick(item)}
+            winnerItem={line.includes(item)}
+          />
         ))}
       </Flex>
       <Flex gap="4">
         {[6, 7, 8].map((item) => (
-          <Square value={squares[item]} onSquareClick={() => handleClick(item)} winnerItem={!!line?.includes(item)} />
+          <Square
+            key={item}
+            value={squares[item]}
+            onSquareClick={() => handleClick(item)}
+            winnerItem={line.includes(item)}
+          />
         ))}
       </Flex>
     </Flex>
