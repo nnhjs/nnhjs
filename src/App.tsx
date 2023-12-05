@@ -1,35 +1,36 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { Flex, Text, ScrollArea, Box, Heading } from '@radix-ui/themes';
 
-function App() {
-  const [count, setCount] = useState(0)
-
+export default function MyApp() {
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    <Flex direction="column" gap="2">
+      <ScrollArea type="always" scrollbars="vertical" style={{ height: 180 }}>
+        <Box p="2" pr="8">
+          <Heading size="4" mb="2" trim="start">
+            Principles of the typographic craft
+          </Heading>
+          <Flex direction="column" gap="4">
+            <Text as="p">
+              Three fundamental aspects of typography are legibility, readability, and aesthetics. Although in a
+              non-technical sense “legible” and “readable” are often used synonymously, typographically they are
+              separate but related concepts.
+            </Text>
 
-export default App
+            <Text as="p">
+              Legibility describes how easily individual characters can be distinguished from one another. It is
+              described by Walter Tracy as “the quality of being decipherable and recognisable”. For instance, if a “b”
+              and an “h”, or a “3” and an “8”, are difficult to distinguish at small sizes, this is a problem of
+              legibility.
+            </Text>
+
+            <Text as="p">
+              Typographers are concerned with legibility insofar as it is their job to select the correct font to use.
+              Brush Script is an example of a font containing many characters that might be difficult to distinguish.
+              The selection of cases influences the legibility of typography because using only uppercase letters
+              (all-caps) reduces legibility.
+            </Text>
+          </Flex>
+        </Box>
+      </ScrollArea>
+    </Flex>
+  );
+}
