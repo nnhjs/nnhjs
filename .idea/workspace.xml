@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c93579a4-7bbd-4383-84b0-2d43ba359ea8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.eslintrc.cjs" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.cjs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TicTacToe/Board.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/TicTacToe/Board.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TicTacToe/Game.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/TicTacToe/Game.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,7 +134,7 @@
       <workItem from="1701682383077" duration="3686000" />
       <workItem from="1701750158636" duration="13654000" />
       <workItem from="1701769211120" duration="4170000" />
-      <workItem from="1701793929749" duration="292000" />
+      <workItem from="1701793929749" duration="1303000" />
     </task>
     <servers />
   </component>
