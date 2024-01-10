@@ -12,7 +12,6 @@ function Modal({ children }: ModalProps) {
   useEffect(() => {
     const modalRoot = document.querySelector('#modal-root') as HTMLElement;
     const el = elRef.current!; // non-null assertion because it will never be null
-    console.log(`modalRoot`, modalRoot);
     modalRoot.appendChild(el);
     return () => {
       modalRoot.removeChild(el);
