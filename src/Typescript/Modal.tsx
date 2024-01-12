@@ -6,15 +6,13 @@ type ModalProps = {
 };
 
 function Modal({ children }: ModalProps) {
-  // create div element only once using ref
   const elRef = useRef<HTMLDivElement | null>(null);
   if (!elRef.current) elRef.current = document.createElement('div');
   useEffect(() => {
-    const modalRoot = document.querySelector('#modal-root') as HTMLElement;
-    const el = elRef.current!; // non-null assertion because it will never be null
-    modalRoot.appendChild(el);
+    const modalRoot = document.querySelector('#modal-root') as HTMLDivElement;
+    modalRoot.appendChild(elRef.current!);
     return () => {
-      modalRoot.removeChild(el);
+      modalRoot.removeChild(elRef.current!);
     };
   }, []);
 

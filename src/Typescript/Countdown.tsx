@@ -11,7 +11,7 @@ type CountdownProps = {
 const Countdown = forwardRef<CountdownHandle, CountdownProps>((props, ref) => {
   useImperativeHandle(ref, () => ({
     start: () => {
-      // alert('Hello');
+      alert('Hello');
     },
   }));
 
