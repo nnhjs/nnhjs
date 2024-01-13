@@ -1,48 +1,72 @@
-import React, { useEffect, useRef } from 'react';
-import type { CountdownHandle } from 'src/Typescript/Countdown.tsx';
+import React, { useEffect, useRef, useState } from 'react';
+import Countdown, {
+  CountdownHandle,
+} from 'src/Typescript/Countdown.tsx';
 import Counter from 'src/Typescript/Counter.tsx';
 
 interface DemoProps {
-  children?: React.ReactNode;
+  children: React.ReactNode;
   childrenElement: React.ReactElement;
   style: React.CSSProperties;
-  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  onChange?: (
+    event: React.ChangeEvent<HTMLInputElement>
+  ) => void;
 }
 
 function Demo(props: DemoProps) {
-  // Mutable Refs
+  // Not Mutable Refs, this ref is readonly, initial = null but ts infer ref is HTMLDivElement
   const divRef = useRef<HTMLDivElement>(null);
 
   // Mutable Refs with initial is null
   const intervalRef = useRef<number | null>(null);
 
-  // Not Mutable Refs with initial is null
-  const countDownEl = useRef<CountdownHandle>(null);
+  // Not Mutable Refs, this ref is readonly, initial = null but ts infer ref is CountdownHandle
+  const countDownRef = useRef<CountdownHandle>(null);
+
+  const [time, setTime] = useState(10);
+  const [isDecreasing, setIsDecreasing] = useState(true);
 
   useEffect(() => {
-    if (!divRef.current) throw Error('divRef is not assigned');
+    if (!divRef.current)
+      throw Error('divRef is not assigned');
   });
 
   useEffect(() => {
-    intervalRef.current = setInterval(() => {
-      // do something
-    }, 1000);
+    if (isDecreasing) {
+      intervalRef.current = setInterval(() => {
+        // do something
+        setTime((prevTime) => prevTime - 1);
+      }, 1000);
+    } else {
+      clearInterval(intervalRef.current!);
+    }
     return () => clearInterval(intervalRef.current!);
-  }, []);
+  }, [isDecreasing]);
 
   useEffect(() => {
-    if (countDownEl.current) {
-      countDownEl.current.start();
+    if (
+      countDownRef.current &&
+      time === 0 &&
+      intervalRef.current
+    ) {
+      countDownRef.current.start();
+      clearInterval(intervalRef.current);
     }
-  }, []);
+  }, [time]);
 
   return (
     <div id="typescript" ref={divRef} style={props.style}>
-      {props.children}
       {props.childrenElement}
+      {props.children}
       <Counter />
-      {/*<Countdown time={time} ref={countDownEl} />*/}
+      <Countdown
+        time={time}
+        ref={countDownRef}
+        isDecreasing={isDecreasing}
+        setIsDecreasing={setIsDecreasing}
+      />
     </div>
   );
 }
+
 export default Demo;

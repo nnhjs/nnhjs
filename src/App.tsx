@@ -3,24 +3,30 @@ import Demo from 'src/Typescript/Demo.tsx';
 import Modal from 'src/Typescript/Modal.tsx';
 
 function App() {
-  const childrenElement = <h1>React Element</h1>;
-  const children = 'ReactNode can be a string, number, or an array of these.';
-  const style = { color: 'blue' };
+  const childrenElement = (
+    <h1 className="text-center text-lg font-bold text-pink-600">
+      This is a heading element
+    </h1>
+  );
+  const string =
+    'ReactNode: string | number | boolean | null | undefined | ReactElement | ReactFragment | ReactPortal';
+  const style = { textAlign: 'center' } as const;
   const [showModal, setShowModal] = useState(false);
 
   return (
     <React.Fragment>
       <Demo childrenElement={childrenElement} style={style}>
-        {children}
+        {string}
         {showModal && (
           <Modal>
             {/*Below is children of Modal Component*/}
-            <div className="backdrop-blur">
+            <div className="bg-amber-200">
               <button onClick={() => setShowModal(false)}>close</button>
             </div>
           </Modal>
         )}
       </Demo>
+
       <section>
         <details open={true}>
           <summary>Explain how do modal active</summary>
