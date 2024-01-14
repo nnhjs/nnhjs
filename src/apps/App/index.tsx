@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import Demo from 'src/Typescript/Demo.tsx';
-import Modal from 'src/Typescript/Modal.tsx';
+import Demo from 'src/apps/App/Typescript/Demo.tsx';
+import Modal from 'src/apps/App/Typescript/Modal.tsx';
 
 function App() {
   const childrenElement = (

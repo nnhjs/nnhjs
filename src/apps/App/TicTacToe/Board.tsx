@@ -1,5 +1,5 @@
 import { Button, Flex, Text } from '@radix-ui/themes';
-import { calculateWinner } from 'src/TicTacToe/utils.ts';
+import { calculateWinner } from 'src/apps/App/TicTacToe/utils.ts';
 import clsx from 'clsx';
 
 function Square({

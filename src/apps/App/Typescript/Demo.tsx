@@ -1,16 +1,14 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Countdown, {
   CountdownHandle,
-} from 'src/Typescript/Countdown.tsx';
-import Counter from 'src/Typescript/Counter.tsx';
+} from 'src/apps/App/Typescript/Countdown.tsx';
+import Counter from 'src/apps/App/Typescript/Counter.tsx';
 
 interface DemoProps {
   children: React.ReactNode;
   childrenElement: React.ReactElement;
   style: React.CSSProperties;
-  onChange?: (
-    event: React.ChangeEvent<HTMLInputElement>
-  ) => void;
+  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 function Demo(props: DemoProps) {
@@ -27,8 +25,7 @@ function Demo(props: DemoProps) {
   const [isDecreasing, setIsDecreasing] = useState(true);
 
   useEffect(() => {
-    if (!divRef.current)
-      throw Error('divRef is not assigned');
+    if (!divRef.current) throw Error('divRef is not assigned');
   });
 
   useEffect(() => {
@@ -44,11 +41,7 @@ function Demo(props: DemoProps) {
   }, [isDecreasing]);
 
   useEffect(() => {
-    if (
-      countDownRef.current &&
-      time === 0 &&
-      intervalRef.current
-    ) {
+    if (countDownRef.current && time === 0 && intervalRef.current) {
       countDownRef.current.start();
       clearInterval(intervalRef.current);
     }

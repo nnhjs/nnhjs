@@ -1,10 +1,12 @@
 import { useState } from 'react';
-import Board from 'src/TicTacToe/Board.tsx';
+import Board from 'src/apps/App/TicTacToe/Board.tsx';
 import { Flex, Heading } from '@radix-ui/themes';
 import clsx from 'clsx';
 
 function Game() {
-  const [history, setHistory] = useState<(string | null)[][]>([Array(9).fill(null)]);
+  const [history, setHistory] = useState<(string | null)[][]>([
+    Array(9).fill(null),
+  ]);
   const [currentMove, setCurrentMove] = useState(0);
   const xIsNext = currentMove % 2 === 0;
   const currentSquares = history[currentMove];
@@ -32,7 +34,13 @@ function Game() {
       description = 'Go to game start';
     }
     return (
-      <li key={move} className={clsx('my-2 rounded-md bg-gray-100 px-2', move === currentMove && 'bg-blue-200')}>
+      <li
+        key={move}
+        className={clsx(
+          'my-2 rounded-md bg-gray-100 px-2',
+          move === currentMove && 'bg-blue-200'
+        )}
+      >
         <button onClick={() => jumpTo(move)}>{description}</button>
       </li>
     );
