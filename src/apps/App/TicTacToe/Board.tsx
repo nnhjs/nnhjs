@@ -1,4 +1,3 @@
-import { Button, Flex, Text } from '@radix-ui/themes';
 import { calculateWinner } from 'src/apps/App/TicTacToe/utils.ts';
 import clsx from 'clsx';
 
@@ -14,14 +13,13 @@ function Square({
   disabled: boolean;
 }) {
   return (
-    <Button
+    <button
       className={clsx('h-16 w-16 border-4', winnerItem && 'bg-green-200')}
-      variant="soft"
       onClick={onSquareClick}
       disabled={disabled}
     >
-      <Text size="6">{value}</Text>
-    </Button>
+      <p>{value}</p>
+    </button>
   );
 }
 
@@ -66,16 +64,16 @@ function Board({
   const gameOver = Boolean(currentMove === 9 || winner);
 
   return (
-    <Flex className="gap-16">
-      <Flex>
-        <Button size="3" onClick={newGame} variant="soft" disabled={!gameOver}>
+    <div className="flex gap-16">
+      <div className="flex">
+        <button onClick={newGame} disabled={!gameOver}>
           New Game
-        </Button>
-      </Flex>
+        </button>
+      </div>
 
-      <Flex direction="column" gap="4">
+      <div className="flex gap-1">
         <div className="status">{status}</div>
-        <Flex gap="4">
+        <div className="flex gap-1">
           {[0, 1, 2].map((item) => (
             <Square
               key={item}
@@ -85,8 +83,8 @@ function Board({
               disabled={gameOver}
             />
           ))}
-        </Flex>
-        <Flex gap="4">
+        </div>
+        <div className="flex gap-1">
           {[3, 4, 5].map((item) => (
             <Square
               key={item}
@@ -96,8 +94,8 @@ function Board({
               disabled={gameOver}
             />
           ))}
-        </Flex>
-        <Flex gap="4">
+        </div>
+        <div className="flex gap-1">
           {[6, 7, 8].map((item) => (
             <Square
               key={item}
@@ -107,9 +105,9 @@ function Board({
               disabled={gameOver}
             />
           ))}
-        </Flex>
-      </Flex>
-    </Flex>
+        </div>
+      </div>
+    </div>
   );
 }
 

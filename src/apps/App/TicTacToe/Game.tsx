@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import Board from 'src/apps/App/TicTacToe/Board.tsx';
-import { Flex, Heading } from '@radix-ui/themes';
 import clsx from 'clsx';
 
 function Game() {
@@ -48,10 +47,8 @@ function Game() {
 
   return (
     <>
-      <Heading as="h2" size="8" className="py-16 text-center">
-        Tic-Toc-Toe
-      </Heading>
-      <Flex className="justify-center gap-16">
+      <h1 className="py-16 text-center">Tic-Toc-Toe</h1>
+      <div className="flex justify-center gap-16">
         <Board
           xIsNext={xIsNext}
           squares={currentSquares}
@@ -59,11 +56,11 @@ function Game() {
           currentMove={currentMove}
           newGame={newGame}
         />
-        <Flex className="flex-col gap-1">
+        <div className="flex flex-col gap-1">
           History
           <ol>{moves}</ol>
-        </Flex>
-      </Flex>
+        </div>
+      </div>
     </>
   );
 }
