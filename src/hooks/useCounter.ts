@@ -21,10 +21,7 @@ type ACTIONTYPE =
       };
     };
 
-function reducer(
-  state: ReturnType<typeof initialState>,
-  action: ACTIONTYPE
-) {
+function reducer(state: ReturnType<typeof initialState>, action: ACTIONTYPE) {
   switch (action.type) {
     case 'increment':
       return { count: state.count + action.payload.step };
@@ -42,11 +39,7 @@ const useCounter = ({
   step: number;
   initialValue: number;
 }) => {
-  const [state, dispatch] = useReducer(
-    reducer,
-    initialValue,
-    initialState
-  );
+  const [state, dispatch] = useReducer(reducer, initialValue, initialState);
   const increment = () =>
     dispatch({
       type: 'increment',
