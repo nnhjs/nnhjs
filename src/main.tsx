@@ -8,6 +8,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Container from 'src/components/Container.tsx';
 import ErrorPage from 'src/components/ErrorPage.tsx';
 import Css from 'src/apps/Css';
+import Input from 'src/apps/Input';
 
 const router = createBrowserRouter([
   {
@@ -24,6 +25,14 @@ const router = createBrowserRouter([
     element: (
       <Container>
         <Css />
+      </Container>
+    ),
+  },
+  {
+    path: '/input',
+    element: (
+      <Container>
+        <Input />
       </Container>
     ),
   },
