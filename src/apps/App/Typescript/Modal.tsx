@@ -7,7 +7,10 @@ type ModalProps = {
 
 function Modal({ children }: ModalProps) {
 	const elRef = useRef<HTMLDivElement | null>(null);
-	if (!elRef.current) elRef.current = document.createElement("div");
+	if (!elRef.current) {
+		elRef.current = document.createElement("div")
+		elRef.current.classList.add("modal");
+	}
 	useEffect(() => {
 		const modalRoot = document.querySelector("#modal-root") as HTMLDivElement;
 		// biome-ignore lint/style/noNonNullAssertion: <explanation>

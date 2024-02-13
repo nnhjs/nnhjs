@@ -20,7 +20,8 @@ function App() {
 				{showModal && (
 					<Modal>
 						{/*Below is children of Modal Component*/}
-						<div className="bg-amber-200">
+						<div className="modal-container">
+							This is a modal component
 							<button onClick={() => setShowModal(false)} type="button">
 								close
 							</button>
@@ -45,7 +46,7 @@ function App() {
 					</p>
 				</details>
 				<button onClick={() => setShowModal(true)} type="button">
-					<span>Open Modal</span>
+					<span>{ showModal ? 'Close Modal' : 'Open Modal' }</span>
 				</button>
 			</section>
 		</React.Fragment>
