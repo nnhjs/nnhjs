@@ -1,23 +1,28 @@
-import './style.css'
+import './index.css'
 
 export default function App() {
   return (
-    <table>
-      <th>
-        <td>Year</td>
-        <td>Comment</td>
-      </th>
-
-      <tbody>
-        <tr>
-          <td>1</td>
-          <td>2</td>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td>2</td>
-        </tr>
-      </tbody>
-    </table>
+    <main>
+      <h1>
+        nnhjs
+      </h1>
+      <ul>
+        <li>
+          <a href="https://x.com/nnhungjs">x</a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/nnhungjs/">linkedin</a>
+        </li>
+        <li>
+          <a href="https://github.com/nnhjs">github</a>
+        </li>
+        <li>
+          <a href="https://cv.nghiahung.dev/">cv</a>
+        </li>
+        <li>
+          <a href="https://wedding.nghiahung.dev/">wedding</a>
+        </li>
+      </ul>
+    </main>
   )
 }
