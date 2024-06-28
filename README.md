@@ -23,3 +23,6 @@ Currently, I am working at [Got It, Inc](https://vn.got-it.ai/) as Frontend Engi
 📨 Just send me a message on my [X](https://x.com/nnhungjs) or email me at <nnhungjs@gmail.com>. I will reply in 3-5 days. Thanks 🥰.
 
 👔 I have my Resume available at [cv.nghiahung.dev](https://cv.nghiahung.dev).
+
+## License
+✨ Readme.md is inspried by [nvh95](https://github.com/nvh95)
