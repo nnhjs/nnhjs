@@ -13,6 +13,7 @@ Currently, I am working at [Got It, Inc](https://vn.got-it.ai/) as Frontend Engi
 
 - **X:** [x.com/nnhungjs](https://x.com/nnhungjs)
 - **Linked In:** [linkedin.com/in/nnhungjs](https://www.linkedin.com/in/nnhungjs/) (please send a note)
+
 ## Opportunities
 
 💼 I love studying, doing and sharing technology. If you want to hire me for:
@@ -25,4 +26,5 @@ Currently, I am working at [Got It, Inc](https://vn.got-it.ai/) as Frontend Engi
 👔 I have my Resume available at [cv.nghiahung.dev](https://cv.nghiahung.dev).
 
 ## License
+
 ✨ Readme.md is inspried by [nvh95](https://github.com/nvh95)
