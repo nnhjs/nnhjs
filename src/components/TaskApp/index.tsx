@@ -5,7 +5,7 @@ import { TasksProvider } from 'src/components/TaskApp/TaskContext.tsx'
 export default function TaskApp() {
   return (
     <TasksProvider>
-      <div className="flex flex-col gap-4">
+      <div>
         <h1>Day off in Kyoto</h1>
         <AddTask />
         <TaskList />

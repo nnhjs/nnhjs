@@ -9,7 +9,7 @@ export default function TaskList() {
   const tasks = useTasks()
 
   return (
-    <ul className="flex flex-col gap-2">
+    <ul>
       {tasks.map((task) => (
         <li key={task.id}>
           <Task task={task} />
@@ -30,9 +30,8 @@ function Task({ task }: TaskProps) {
   let taskContent
   if (isEditing) {
     taskContent = (
-      <span className="pl-2">
+      <span>
         <input
-          className="border border-slate-300 rounded-md py-2 pl-4 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm"
           value={task.text}
           onChange={(e) => {
             dispatch({
@@ -47,7 +46,7 @@ function Task({ task }: TaskProps) {
       </span>
     )
   } else {
-    taskContent = <span className="pl-2">{task.text}</span>
+    taskContent = <span>{task.text}</span>
   }
   return (
     <>
@@ -70,14 +69,12 @@ function Task({ task }: TaskProps) {
       {isEditing ? (
         <button
           onClick={() => setIsEditing(false)}
-          className="ml-2 px-2 bg-green-200 rounded-md"
         >
           Save
         </button>
       ) : (
         <button
           onClick={() => setIsEditing(true)}
-          className="ml-2 px-2 bg-amber-200 rounded-md"
         >
           Edit
         </button>
@@ -90,7 +87,6 @@ function Task({ task }: TaskProps) {
             id: task.id,
           })
         }}
-        className="ml-2 px-2 bg-red-200 rounded-md"
       >
         Delete
       </button>

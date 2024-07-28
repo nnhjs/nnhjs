@@ -15,15 +15,15 @@ const TanStackRouterDevtools =
       )
 export const Route = createRootRoute({
   component: () => (
-    <ThemeProvider defaultTheme="light">
-      <div className="flex gap-2">
-        <Link to="/" className="[&.active]:font-bold">
+    <ThemeProvider>
+      <div>
+        <Link to="/">
           Home
-        </Link>{' '}
-        <Link to="/about" className="[&.active]:font-bold">
+        </Link>
+        <Link to="/about">
           About
         </Link>
-        <Link to="/task" className="[&.active]:font-bold">
+        <Link to="/task">
           Task
         </Link>
       </div>

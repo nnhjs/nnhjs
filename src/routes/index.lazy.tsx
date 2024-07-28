@@ -9,7 +9,7 @@ function Index() {
     <>
       <h3>Welcome Home!</h3>
       <main>
-        <ul className="ml-6 list-disc">
+        <ul>
           <li>
             <a href="https://x.com/nnhungjs">x</a>
           </li>
