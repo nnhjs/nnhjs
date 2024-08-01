@@ -21,7 +21,7 @@ Currently, I am working at [Got It, Inc](https://vn.got-it.ai/) as Frontend Engi
 - Frontend engineers.
 - Or a Seed software engineer.
 
-📨 Just send me a message on my [X](https://x.com/nnhungjs) or email me at <nnhungjs@gmail.com>. I will reply in 3-5 days. Thanks 🥰.
+📨 Just send me a message on my [X](https://x.com/nnhungjs) or email me at <hi@nghiahung.dev>. I will reply in 3-5 days. Thanks 🥰.
 
 👔 I have my Resume available at [cv.nghiahung.dev](https://cv.nghiahung.dev).
 
