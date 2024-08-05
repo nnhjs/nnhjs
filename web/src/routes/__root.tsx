@@ -1,6 +1,5 @@
 import { createRootRoute, Link, Outlet } from '@tanstack/react-router'
 import React from 'react'
-import { ThemeProvider } from '@/components/theme-provider'
 
 const TanStackRouterDevtools =
   process.env.NODE_ENV === 'production'
@@ -15,21 +14,22 @@ const TanStackRouterDevtools =
       )
 export const Route = createRootRoute({
   component: () => (
-    <ThemeProvider>
-      <div>
-        <Link to="/">
+    <>
+      <div className="p-2 flex gap-2">
+        <Link to="/" className="[&.active]:font-bold">
           Home
         </Link>
-        <Link to="/about">
+        <Link to="/about" className="[&.active]:font-bold">
           About
         </Link>
-        <Link to="/task">
-          Task
+        <Link to="/posts" className="[&.active]:font-bold">
+          Posts
         </Link>
       </div>
       <hr />
+      <div>__root</div>
       <Outlet />
       <TanStackRouterDevtools />
-    </ThemeProvider>
+    </>
   ),
 })
