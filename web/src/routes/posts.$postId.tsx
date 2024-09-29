@@ -1,4 +1,4 @@
-import { createFileRoute } from '@tanstack/react-router'
+import { createFileRoute, Link } from '@tanstack/react-router'
 
 const fetchPost = async (postId: string) => {
   const response = await fetch(`/api/posts/${postId}`)
@@ -7,6 +7,7 @@ const fetchPost = async (postId: string) => {
 
 export const Route = createFileRoute('/posts/$postId')({
   // In a loader
+  beforeLoad: () => ({ hello: 'world' }),
   loader: ({ params }) => fetchPost(params.postId),
   // Or in a component
   component: PostComponent,
@@ -14,5 +15,17 @@ export const Route = createFileRoute('/posts/$postId')({
 
 function PostComponent() {
   const { postId } = Route.useParams()
-  return <div>Post ID: {postId}</div>
+  return (
+    <>
+      <div>Post ID: {postId}</div>
+      <Link
+        to="/posts/$postId/edit"
+        params={{
+          postId,
+        }}
+      >
+        Edit
+      </Link>
+    </>
+  )
 }

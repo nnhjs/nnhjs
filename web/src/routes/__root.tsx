@@ -15,16 +15,27 @@ const TanStackRouterDevtools =
 export const Route = createRootRoute({
   component: () => (
     <>
-      <div className="p-2 flex gap-2">
-        <Link to="/" className="[&.active]:font-bold">
+      <div
+        style={{
+          backgroundColor: '#f0f0f0',
+          display: 'flex',
+          gap: '1.5rem',
+        }}
+      >
+        <Link
+          to="/"
+          activeProps={{
+            style: {
+              fontWeight: 'bold',
+              color: 'red',
+            },
+          }}
+        >
           Home
         </Link>
-        <Link to="/about" className="[&.active]:font-bold">
-          About
-        </Link>
-        <Link to="/posts" className="[&.active]:font-bold">
-          Posts
-        </Link>
+        <Link to="/about">About</Link>
+        <Link to="/posts">Posts</Link>
+        <Link to="/settings">Settings</Link>
       </div>
       <hr />
       <div>__root</div>

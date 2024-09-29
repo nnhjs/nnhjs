@@ -192,21 +192,164 @@ declare module '@tanstack/react-router' {
 
 // Create and export the route tree
 
-export const routeTree = rootRoute.addChildren({
-  IndexRoute,
-  LayoutRoute: LayoutRoute.addChildren({
-    LayoutLayoutARoute,
-    LayoutLayoutBRoute,
-  }),
-  AboutRoute,
-  PostsRoute: PostsRoute.addChildren({ PostsPostIdRoute, PostsIndexRoute }),
-  SettingsRoute: SettingsRoute.addChildren({
-    SettingsNotificationsRoute,
-    SettingsProfileRoute,
-  }),
-  FilesSplatRoute,
-  PostsPostIdEditRoute,
-})
+interface LayoutRouteChildren {
+  LayoutLayoutARoute: typeof LayoutLayoutARoute
+  LayoutLayoutBRoute: typeof LayoutLayoutBRoute
+}
+
+const LayoutRouteChildren: LayoutRouteChildren = {
+  LayoutLayoutARoute: LayoutLayoutARoute,
+  LayoutLayoutBRoute: LayoutLayoutBRoute,
+}
+
+const LayoutRouteWithChildren =
+  LayoutRoute._addFileChildren(LayoutRouteChildren)
+
+interface PostsRouteChildren {
+  PostsPostIdRoute: typeof PostsPostIdRoute
+  PostsIndexRoute: typeof PostsIndexRoute
+}
+
+const PostsRouteChildren: PostsRouteChildren = {
+  PostsPostIdRoute: PostsPostIdRoute,
+  PostsIndexRoute: PostsIndexRoute,
+}
+
+const PostsRouteWithChildren = PostsRoute._addFileChildren(PostsRouteChildren)
+
+interface SettingsRouteChildren {
+  SettingsNotificationsRoute: typeof SettingsNotificationsRoute
+  SettingsProfileRoute: typeof SettingsProfileRoute
+}
+
+const SettingsRouteChildren: SettingsRouteChildren = {
+  SettingsNotificationsRoute: SettingsNotificationsRoute,
+  SettingsProfileRoute: SettingsProfileRoute,
+}
+
+const SettingsRouteWithChildren = SettingsRoute._addFileChildren(
+  SettingsRouteChildren,
+)
+
+export interface FileRoutesByFullPath {
+  '/': typeof IndexRoute
+  '': typeof LayoutRouteWithChildren
+  '/about': typeof AboutRoute
+  '/posts': typeof PostsRouteWithChildren
+  '/settings': typeof SettingsRouteWithChildren
+  '/layout-a': typeof LayoutLayoutARoute
+  '/layout-b': typeof LayoutLayoutBRoute
+  '/files/$': typeof FilesSplatRoute
+  '/posts/$postId': typeof PostsPostIdRoute
+  '/settings/notifications': typeof SettingsNotificationsRoute
+  '/settings/profile': typeof SettingsProfileRoute
+  '/posts/': typeof PostsIndexRoute
+  '/posts/$postId/edit': typeof PostsPostIdEditRoute
+}
+
+export interface FileRoutesByTo {
+  '/': typeof IndexRoute
+  '': typeof LayoutRouteWithChildren
+  '/about': typeof AboutRoute
+  '/settings': typeof SettingsRouteWithChildren
+  '/layout-a': typeof LayoutLayoutARoute
+  '/layout-b': typeof LayoutLayoutBRoute
+  '/files/$': typeof FilesSplatRoute
+  '/posts/$postId': typeof PostsPostIdRoute
+  '/settings/notifications': typeof SettingsNotificationsRoute
+  '/settings/profile': typeof SettingsProfileRoute
+  '/posts': typeof PostsIndexRoute
+  '/posts/$postId/edit': typeof PostsPostIdEditRoute
+}
+
+export interface FileRoutesById {
+  __root__: typeof rootRoute
+  '/': typeof IndexRoute
+  '/_layout': typeof LayoutRouteWithChildren
+  '/about': typeof AboutRoute
+  '/posts': typeof PostsRouteWithChildren
+  '/settings': typeof SettingsRouteWithChildren
+  '/_layout/layout-a': typeof LayoutLayoutARoute
+  '/_layout/layout-b': typeof LayoutLayoutBRoute
+  '/files/$': typeof FilesSplatRoute
+  '/posts/$postId': typeof PostsPostIdRoute
+  '/settings/notifications': typeof SettingsNotificationsRoute
+  '/settings/profile': typeof SettingsProfileRoute
+  '/posts/': typeof PostsIndexRoute
+  '/posts/$postId/edit': typeof PostsPostIdEditRoute
+}
+
+export interface FileRouteTypes {
+  fileRoutesByFullPath: FileRoutesByFullPath
+  fullPaths:
+    | '/'
+    | ''
+    | '/about'
+    | '/posts'
+    | '/settings'
+    | '/layout-a'
+    | '/layout-b'
+    | '/files/$'
+    | '/posts/$postId'
+    | '/settings/notifications'
+    | '/settings/profile'
+    | '/posts/'
+    | '/posts/$postId/edit'
+  fileRoutesByTo: FileRoutesByTo
+  to:
+    | '/'
+    | ''
+    | '/about'
+    | '/settings'
+    | '/layout-a'
+    | '/layout-b'
+    | '/files/$'
+    | '/posts/$postId'
+    | '/settings/notifications'
+    | '/settings/profile'
+    | '/posts'
+    | '/posts/$postId/edit'
+  id:
+    | '__root__'
+    | '/'
+    | '/_layout'
+    | '/about'
+    | '/posts'
+    | '/settings'
+    | '/_layout/layout-a'
+    | '/_layout/layout-b'
+    | '/files/$'
+    | '/posts/$postId'
+    | '/settings/notifications'
+    | '/settings/profile'
+    | '/posts/'
+    | '/posts/$postId/edit'
+  fileRoutesById: FileRoutesById
+}
+
+export interface RootRouteChildren {
+  IndexRoute: typeof IndexRoute
+  LayoutRoute: typeof LayoutRouteWithChildren
+  AboutRoute: typeof AboutRoute
+  PostsRoute: typeof PostsRouteWithChildren
+  SettingsRoute: typeof SettingsRouteWithChildren
+  FilesSplatRoute: typeof FilesSplatRoute
+  PostsPostIdEditRoute: typeof PostsPostIdEditRoute
+}
+
+const rootRouteChildren: RootRouteChildren = {
+  IndexRoute: IndexRoute,
+  LayoutRoute: LayoutRouteWithChildren,
+  AboutRoute: AboutRoute,
+  PostsRoute: PostsRouteWithChildren,
+  SettingsRoute: SettingsRouteWithChildren,
+  FilesSplatRoute: FilesSplatRoute,
+  PostsPostIdEditRoute: PostsPostIdEditRoute,
+}
+
+export const routeTree = rootRoute
+  ._addFileChildren(rootRouteChildren)
+  ._addFileTypes<FileRouteTypes>()
 
 /* prettier-ignore-end */
 
