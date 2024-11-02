@@ -1,17 +1,15 @@
-<img src="https://github-readme-stats.vercel.app/api?username=nnhjs&show_icons=true&count_private=true&theme=dracula&include_all_commits=true" alt="nnhjs's Github stats" />
-
 ## Welcome
 
 👋 Hi.
 I am Hung.
-I am a frontend developer 🧑‍💻.
-Currently, I am working at [Got It, Inc](https://vn.got-it.ai/) as Frontend Engineer.
+I am a software engineer 🧑‍💻.
+Currently, I am working at Employment Hero as Frontend Engineer.
 
 ## Get in touch
 
 ✋ I love to chat about DX, open source, frontend development, React, devtools, Testing, running and more. Following are some of useful links you can find me there:
 
-- **X:** [x.com/nnhungjs](https://x.com/nnhungjs)
+- **Bluesky:** [x.com/nnhungjs]([https://x.com/nnhungjs](https://bsky.app/profile/nghiahung.dev))
 - **Linked In:** [linkedin.com/in/nnhungjs](https://www.linkedin.com/in/nnhungjs/) (please send a note)
 
 ## Opportunities
@@ -19,9 +17,9 @@ Currently, I am working at [Got It, Inc](https://vn.got-it.ai/) as Frontend Engi
 💼 I love studying, doing and sharing technology. If you want to hire me for:
 
 - Frontend engineers.
-- Or a Seed software engineer.
+- Or a seed software engineer.
 
-📨 Just send me a message on my [X](https://x.com/nnhungjs) or email me at <hi@nghiahung.dev>. I will reply in 3-5 days. Thanks 🥰.
+📨 Just send me a message on my [Bluesky]([https://x.com/nnhungjs](https://bsky.app/profile/nghiahung.dev)) or email me at <hi@nghiahung.dev>. I will reply in 3-5 days. Thanks 🥰.
 
 👔 I have my Resume available at [cv.nghiahung.dev](https://cv.nghiahung.dev).
 
