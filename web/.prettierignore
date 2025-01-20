@@ -1,8 +1,0 @@
-**/api
-**/dist
-**/public
-pnpm-lock.yaml
-routeTree.gen.ts
-
-# Custom
-ignore
