@@ -1,8 +1,9 @@
 {
   "name": "blog",
+  "main": "src/index.js",
   "compatibility_date": "2025-01-01",
   "assets": {
-    "directory": "./dist",
+    "directory": "./public",
     "binding": "ASSETS"
   }
 }
